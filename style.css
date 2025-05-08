@@ -118,6 +118,44 @@ nav {
   color: #4ecdc4;
 }
 
+#about p {
+  text-align: center;
+  color: #ccc;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* About Image Section */
+#about-image {
+  padding: 2rem 10%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.about-image-container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.about-image {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 10px 30px rgba(78, 205, 196, 0.3);
+  transition: all 0.3s ease;
+  border: 4px solid rgba(78, 205, 196, 0.3);
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+
+.about-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(78, 205, 196, 0.4);
+  border-color: rgba(78, 205, 196, 0.6);
+}
+
 /* Skills Section */
 #skills {
   padding: 5rem 10%;
@@ -408,5 +446,202 @@ footer {
   
   .hero-content p {
     font-size: 1.2rem;
+  }
+}
+
+/* Education Section */
+#education {
+  padding: 5rem 10%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#education h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: #4ecdc4;
+}
+
+.timeline-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline-container::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background: #4ecdc4;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+}
+
+.timeline-item {
+  padding: 10px 40px;
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+
+.timeline-content {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  background: rgba(78, 205, 196, 0.2);
+}
+
+.timeline-content h3 {
+  color: #4ecdc4;
+  margin-bottom: 10px;
+}
+
+.timeline-date {
+  color: #ff6b6b;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Experience Section */
+#experience {
+  padding: 5rem 10%;
+}
+
+#experience h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: #4ecdc4;
+}
+
+.experience-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.experience-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-10px);
+  background: rgba(78, 205, 196, 0.2);
+}
+
+.experience-card h3 {
+  color: #4ecdc4;
+  margin-bottom: 1rem;
+}
+
+.experience-date {
+  color: #ff6b6b;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.experience-card ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.experience-card li {
+  margin-bottom: 0.5rem;
+  color: #ccc;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.experience-card li::before {
+  content: '•';
+  color: #4ecdc4;
+  position: absolute;
+  left: 0;
+}
+
+/* Achievements Section */
+#achievements {
+  padding: 5rem 10%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#achievements h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: #4ecdc4;
+}
+
+.achievements-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.achievement-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.achievement-card:hover {
+  transform: translateY(-10px);
+  background: rgba(78, 205, 196, 0.2);
+}
+
+.achievement-card i {
+  font-size: 3rem;
+  color: #ff6b6b;
+  margin-bottom: 1rem;
+}
+
+.achievement-card h3 {
+  color: #4ecdc4;
+  margin-bottom: 1rem;
+}
+
+.achievement-card p {
+  color: #ccc;
+}
+
+/* Responsive Design for Timeline */
+@media (max-width: 768px) {
+  .timeline-container::after {
+    left: 31px;
+  }
+  
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+  
+  .timeline-item:nth-child(even) {
+    left: 0;
   }
 } 
